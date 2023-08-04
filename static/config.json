@@ -1,0 +1,17 @@
+{
+    "params":
+    {
+        "blog_name":"fukra Editing",
+        "local_server":"localhost",
+        "local_uri":"mysql+mysqlconnector://root:@localhost/wecode'.format(user='your_user', password='password', server='localhost', database='dname)",
+        "prod_uri":"mysql+mysqlconnector://root:@localhost/wecode'.format(user='your_user', password='password', server='localhost', database='dname)",
+        
+        "gmail_user":"shivambadshah000@gmail.com",
+        "gmail_pass":"fcdynwgwwbpliiin",
+        "about_text":"Hi my name is harry and I create programming tutorials and I am a good boy",
+        "upload_location":"C:\\DATA\\image editing app with gui python\\uploads",
+        "UPLOAD_FOLDER " : ""
+
+    } 
+    
+}

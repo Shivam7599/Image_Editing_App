@@ -1,0 +1,45 @@
+{% extends 'basic.html' %}
+{% block body %}
+
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-success" role="alert">
+    {{ message | safe }}
+  </div>
+  <!-- <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success</strong> {{ message | safe }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div> -->
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+  <div class="container border rounded border-info">
+    <h1 class="fs-2 text">Fukra Editing -Edit your images online</h1>
+    <div class="form-floating mb-3">
+      <form action="/edit" method="post" enctype="multipart/form-data">
+        <div class="custom-file mb-3" id="customFile" lang="es">
+          <label class="file-label" for="formFile">Select file...</label><br />
+          <input type="file" name="file" class="form-control" id="formFile" />
+        </div>
+        <div class="form-floating mb-3">
+          <select name="Operation" class="form-select" id="floatingSelect" aria-label="Default select example">
+            <option selected>Select an Operation</option>
+            <option value="cpng">Convert to PNG</option>
+            <option value="cgray">Convert to Grayscale</option>
+            <option value="cjpg">Convert to JPG</option>
+            <option value="cwebp">Convert to Webp</option>
+            <!-- <option value="ctxt">Convert to txt</option>
+            <option value="cgif">Convert to gif</option>
+            <option value="cpdf">Convert to pdf</option> -->
+          </select>
+          <label class="floatingSelect">Select an Operation</label>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock body %}
